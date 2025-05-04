@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 0%);
+}
+header {
+    background-color: #35424a;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 70px;
+}
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: right;
+    background-color: #35424a;
+    padding: 10px 0;
+}
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    left: 70px;
+    list-style: none;
+}
+nav a {
+    color: #35424a;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #e8491d;
+    margin: 0 10px;
+}
+nav a:hover {
+    background-color: #35424a;
+    color: white;
+}
+nav a.active {
+    background-color: #35424a;
+    color: white;
+}
+nav a.active:hover {
+    background-color: #e8491d;
+    color: white;
+}
+nav a:visited {
+    color: #35424a;
+}
+#modal {
+    display:none; 
+    position:fixed; 
+    top:50%; 
+    left:50%; 
+    width: 20%;
+    transform:translate(-50%, -50%); 
+    padding:20px; 
+    background: red; 
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+div {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+    text-align: center;
+}
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Defines 2 columns */
+    grid-gap: 10px; /* Adds spacing */ 
+    width: 100%;
+}
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+fieldset {
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+}
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #555;
+}
+.bold {
+    font-weight: bold;
+}
+.bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+footer {
+    background-color: #35424a;
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .nav-list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0;
+    }
+    nav a {
+        margin: auto;
+    }
+    div {
+        width: 90%;
+    }
+    img {
+        height: 200px;
+    }
+    .image-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+@media (max-width: 480px) {
+    header, footer {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    nav a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    div {
+        padding: 15px;
+        width: 95%;
+    }
+}
+
+/* Hover Effects */
+nav a:hover {
+    background-color: #35424a;
+    color: white;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: white;
+    }
+    header, footer {
+        background-color: #1e1e1e;
+    }
+    div {
+        background-color: #2c2c2c;
+        color: white;
+    }
+    nav a {
+        background-color: #e8491d;
+        color: white;
+    }
+}
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #ffffff;
+        color: black;
+    }
+    header, footer {
+        background-color: #f1f1f1;
+    }
+    div {
+        background-color: #ffffff;
+        color: black;
+    }
+    nav a {
+        background-color: #35424a;
+        color: white;
+    }
+}
